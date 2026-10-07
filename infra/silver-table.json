@@ -1,0 +1,52 @@
+{
+  "Name": "silver_trades",
+  "StorageDescriptor": {
+    "Columns": [
+      {
+        "Name": "trade_id",
+        "Type": "bigint"
+      },
+      {
+        "Name": "price",
+        "Type": "double"
+      },
+      {
+        "Name": "quantity",
+        "Type": "double"
+      },
+      {
+        "Name": "trade_value",
+        "Type": "double"
+      },
+      {
+        "Name": "is_buyer_maker",
+        "Type": "boolean"
+      },
+      {
+        "Name": "trade_time",
+        "Type": "timestamp"
+      },
+      {
+        "Name": "ingested_at",
+        "Type": "timestamp"
+      }
+    ],
+    "Location": "s3://maham-crypto-pipeline-2026-246312965173/silver/trades/",
+    "InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+    "OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+    "SerdeInfo": {
+      "SerializationLibrary": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe"
+    }
+  },
+  "PartitionKeys": [
+    {
+      "Name": "symbol",
+      "Type": "string"
+    }
+  ],
+  "TableType": "EXTERNAL_TABLE",
+  "Parameters": {
+    "classification": "parquet",
+    "typeOfData": "file"
+  }
+}

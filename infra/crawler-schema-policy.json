@@ -1,0 +1,4 @@
+{
+  "UpdateBehavior": "UPDATE_IN_DATABASE",
+  "DeleteBehavior": "DEPRECATE_IN_DATABASE"
+}

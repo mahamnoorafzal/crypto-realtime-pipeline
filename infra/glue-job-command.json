@@ -1,0 +1,5 @@
+{
+  "Name": "glueetl",
+  "ScriptLocation": "s3://maham-crypto-pipeline-2026-246312965173/scripts/crypto_bronze_to_silver.py",
+  "PythonVersion": "3"
+}

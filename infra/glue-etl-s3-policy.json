@@ -1,0 +1,31 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadBronze",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetBucketLocation",
+        "s3:ListBucket"
+      ],
+      "Resource": "arn:aws:s3:::maham-crypto-pipeline-2026-246312965173"
+    },
+    {
+      "Sid": "ReadBronzeObjects",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": "arn:aws:s3:::maham-crypto-pipeline-2026-246312965173/bronze/trades/*"
+    },
+    {
+      "Sid": "WriteSilver",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:AbortMultipartUpload"
+      ],
+      "Resource": "arn:aws:s3:::maham-crypto-pipeline-2026-246312965173/silver/trades/*"
+    }
+  ]
+}

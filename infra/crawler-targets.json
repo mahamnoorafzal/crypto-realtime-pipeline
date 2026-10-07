@@ -1,0 +1,7 @@
+{
+  "S3Targets": [
+    {
+      "Path": "s3://maham-crypto-pipeline-2026-246312965173/bronze/trades/"
+    }
+  ]
+}

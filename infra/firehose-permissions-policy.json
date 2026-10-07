@@ -1,0 +1,34 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadFromKinesis",
+      "Effect": "Allow",
+      "Action": [
+        "kinesis:DescribeStream",
+        "kinesis:DescribeStreamSummary",
+        "kinesis:GetShardIterator",
+        "kinesis:GetRecords",
+        "kinesis:ListShards",
+        "kinesis:SubscribeToShard"
+      ],
+      "Resource": "arn:aws:kinesis:ap-south-1:246312965173:stream/crypto-trades"
+    },
+    {
+      "Sid": "WriteToS3",
+      "Effect": "Allow",
+      "Action": [
+        "s3:AbortMultipartUpload",
+        "s3:GetBucketLocation",
+        "s3:ListBucket",
+        "s3:ListBucketMultipartUploads",
+        "s3:PutObject",
+        "s3:PutObjectAcl"
+      ],
+      "Resource": [
+        "arn:aws:s3:::maham-crypto-pipeline-2026-246312965173",
+        "arn:aws:s3:::maham-crypto-pipeline-2026-246312965173/*"
+      ]
+    }
+  ]
+}

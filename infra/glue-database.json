@@ -1,0 +1,4 @@
+﻿{
+  "Name": "crypto_realtime_db",
+  "Description": "Data Catalog for the real-time crypto trade analytics pipeline"
+}
